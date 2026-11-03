@@ -609,13 +609,23 @@ body::before {
   border-top: 1px solid var(--line);
 }
 
+.card__link,
 .card__links a {
   font-size: 13px;
   font-weight: 500;
   color: var(--text-dim);
   transition: color .25s var(--ease);
 }
+
+/* 카드 전체가 링크이므로, 카드에 마우스를 올리면 함께 강조 */
+.card:hover .card__link,
 .card__links a:hover { color: var(--accent); }
+
+/* 키보드 포커스 표시 (접근성) */
+.card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
 
 /* ---------- 10. Contact ---------- */
 .contact__list {
