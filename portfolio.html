@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio | Portfolio</title>
+  <title>Portfolio | 김민찬 Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- ===== 좌측 고정 탭 네비게이션 (데스크탑) ===== -->
   <nav class="side-nav" aria-label="페이지 네비게이션">
-    <div class="side-nav__brand">PORTFOLIO</div>
+    <div class="side-nav__brand">김민찬</div>
     <ul class="side-nav__list">
       <li><a href="index.html"     class="nav-item"><span class="nav-item__dot"></span><span class="nav-item__label">Home</span></a></li>
       <li><a href="about.html"     class="nav-item"><span class="nav-item__dot"></span><span class="nav-item__label">About</span></a></li>
@@ -22,7 +22,7 @@
 
   <!-- ===== 모바일 상단 고정 탭 바 ===== -->
   <nav class="top-nav" aria-label="페이지 네비게이션 (모바일)">
-    <div class="top-nav__brand">PORTFOLIO</div>
+    <div class="top-nav__brand">김민찬</div>
     <ul class="top-nav__list">
       <li><a href="index.html"     class="top-nav__item">Home</a></li>
       <li><a href="about.html"     class="top-nav__item">About</a></li>
@@ -47,29 +47,29 @@
       <!-- 프로젝트 필터 -->
       <div class="filter reveal" data-delay="2">
         <button type="button" class="filter__btn is-active" data-filter="all">All</button>
+        <button type="button" class="filter__btn" data-filter="robot">Robot</button>
         <button type="button" class="filter__btn" data-filter="web">Web</button>
-        <button type="button" class="filter__btn" data-filter="app">App</button>
         <button type="button" class="filter__btn" data-filter="team">Team</button>
       </div>
 
       <div class="projects" id="projectGrid">
 
-        <article class="card reveal" data-delay="3" data-category="web team">
+        <article class="card reveal" data-delay="3" data-category="robot team">
           <div class="card__thumb" data-initial="01"></div>
           <div class="card__body">
-            <h2 class="card__title">프로젝트 제목: (여기에 추가)</h2>
+            <h2 class="card__title">Robot Intelligence TurtleBot</h2>
             <p class="card__desc">설명: (여기에 추가)</p>
             <ul class="card__tags">
-              <li>HTML</li><li>CSS</li><li>JavaScript</li>
+              <li>C++</li><li>Robot</li>
             </ul>
             <div class="card__links">
-              <a href="https://github.com/mck737338" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-              <a href="#" target="_blank" rel="noopener noreferrer">Demo ↗</a>
+              <a href="https://github.com/mck737338/Robit_intelligence_turtle-bot"
+                 target="_blank" rel="noopener noreferrer">GitHub ↗</a>
             </div>
           </div>
         </article>
 
-        <article class="card reveal" data-delay="4" data-category="web">
+        <article class="card reveal" data-delay="4" data-category="robot">
           <div class="card__thumb" data-initial="02"></div>
           <div class="card__body">
             <h2 class="card__title">프로젝트 제목: (여기에 추가)</h2>
@@ -83,22 +83,8 @@
           </div>
         </article>
 
-        <article class="card reveal" data-delay="5" data-category="app">
+        <article class="card reveal" data-delay="5" data-category="web">
           <div class="card__thumb" data-initial="03"></div>
-          <div class="card__body">
-            <h2 class="card__title">프로젝트 제목: (여기에 추가)</h2>
-            <p class="card__desc">설명: (여기에 추가)</p>
-            <ul class="card__tags">
-              <li>(여기에 추가)</li>
-            </ul>
-            <div class="card__links">
-              <a href="https://github.com/mck737338" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card reveal" data-delay="5" data-category="team app">
-          <div class="card__thumb" data-initial="04"></div>
           <div class="card__body">
             <h2 class="card__title">프로젝트 제목: (여기에 추가)</h2>
             <p class="card__desc">설명: (여기에 추가)</p>
@@ -116,7 +102,7 @@
     </div>
 
     <footer class="footer">
-      <small>&copy; <span class="year"></span> 이름: (여기에 추가)</small>
+      <small>&copy; <span class="year"></span> 김민찬</small>
     </footer>
   </main>
 

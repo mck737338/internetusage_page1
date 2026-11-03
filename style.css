@@ -748,7 +748,98 @@ body::before {
   .reveal { opacity: 1; transform: none; transition: none; }
 }
 
-/* ---------- 12. 반응형 ---------- */
+/* ---------- 12. 페이지 전환 (끝까지 스크롤) ---------- */
+
+/* 하단 안내 바: 페이지 맨 아래에 닿으면 나타남 */
+.page-jump {
+  position: fixed;
+  left: 50%;
+  bottom: 28px;
+  transform: translate(-50%, 16px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .35s var(--ease), transform .35s var(--ease);
+  z-index: 150;
+}
+
+.page-jump.is-visible {
+  opacity: 1;
+  transform: translate(-50%, 0);
+  pointer-events: auto;
+}
+
+.page-jump__link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 22px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(20, 22, 25, .92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 14px 34px -18px rgba(0, 0, 0, .9);
+  transition: border-color .25s var(--ease);
+}
+
+.page-jump__link:hover { border-color: rgba(110, 231, 168, .4); }
+
+.page-jump__text {
+  font-size: 13px;
+  color: var(--text-dim);
+  white-space: nowrap;
+}
+
+.page-jump__text strong { color: var(--accent); font-weight: 600; }
+
+.page-jump__arrow {
+  font-size: 14px;
+  color: var(--accent);
+  animation: bob 1.6s ease-in-out infinite;
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(3px); }
+}
+
+/* 스크롤 누적량 표시 바 */
+.page-jump__bar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: transparent;
+}
+
+.page-jump__bar i {
+  display: block;
+  width: 0%;
+  height: 100%;
+  background: var(--accent);
+  transition: width .12s linear;
+}
+
+/* 페이지를 떠날 때 전환 효과 */
+body {
+  opacity: 1;
+  transition: opacity .25s ease;
+}
+
+body.is-leaving { opacity: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  body, body.is-leaving { opacity: 1; transition: none; }
+  .page-jump__arrow { animation: none; }
+}
+
+/* 안내 바가 푸터를 가리지 않도록 여백 확보 */
+.footer { padding-bottom: 88px; }
+
+/* ---------- 13. 반응형 ---------- */
 @media (max-width: 1024px) {
   :root { --nav-w: 180px; }
 
@@ -757,7 +848,7 @@ body::before {
   .side-nav__foot { left: 28px; }
 
   .container { padding: 88px 44px 56px; }
-  .footer { margin: 0 44px; padding: 28px 0 36px; }
+  .footer { margin: 0 44px; padding: 28px 0 88px; }
 }
 
 @media (max-width: 768px) {
@@ -778,7 +869,12 @@ body::before {
   .page-head { margin-bottom: 28px; }
   .page-head__title::after { display: none; }
 
-  .footer { margin: 0 20px; padding: 24px 0 32px; }
+  .footer { margin: 0 20px; padding: 24px 0 92px; }
+
+  .page-jump { bottom: 20px; left: 16px; right: 16px; transform: translateY(16px); }
+  .page-jump.is-visible { transform: translateY(0); }
+  .page-jump__link { justify-content: center; padding: 11px 16px; }
+  .page-jump__text { font-size: 12px; }
 
   .projects { grid-template-columns: 1fr; }
 
