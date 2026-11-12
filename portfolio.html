@@ -53,91 +53,23 @@
       </header>
 
       <p class="lead reveal" data-delay="1">
-        진행한 프로젝트와 실습을 정리했습니다. 카드를 클릭하면 해당 페이지나 저장소로 이동합니다.
+        진행한 실습과 프로젝트를 정리했습니다. 카드를 클릭하면 해당 페이지나 저장소로 이동합니다.
       </p>
 
       <!-- 프로젝트 필터 -->
       <div class="filter reveal" data-delay="2">
         <button type="button" class="filter__btn is-active" data-filter="all">All</button>
+        <button type="button" class="filter__btn" data-filter="practice">실습</button>
         <button type="button" class="filter__btn" data-filter="robot">Robot</button>
         <button type="button" class="filter__btn" data-filter="web">Web</button>
         <button type="button" class="filter__btn" data-filter="team">Team</button>
-        <button type="button" class="filter__btn" data-filter="practice">실습</button>
       </div>
 
       <!-- 카드 전체가 하나의 링크입니다 (article → a 로 변경) -->
       <div class="projects" id="projectGrid">
 
-        <a class="card reveal" data-delay="3" data-category="robot team"
-           href="https://github.com/mck737338/Robit_intelligence_turtle-bot"
-           target="_blank" rel="noopener noreferrer">
-          <div class="card__thumb" data-initial="01"></div>
-          <div class="card__body">
-            <h2 class="card__title">Robot Intelligence TurtleBot</h2>
-            <p class="card__desc">설명: (여기에 추가)</p>
-            <ul class="card__tags">
-              <li>C++</li><li>Robot</li>
-            </ul>
-            <div class="card__links">
-              <span class="card__link">GitHub ↗</span>
-            </div>
-          </div>
-        </a>
-
-        <a class="card reveal" data-delay="4" data-category="robot"
-           href="https://github.com/mck737338"
-           target="_blank" rel="noopener noreferrer">
-          <div class="card__thumb" data-initial="02"></div>
-          <div class="card__body">
-            <h2 class="card__title">프로젝트 제목: (여기에 추가)</h2>
-            <p class="card__desc">설명: (여기에 추가)</p>
-            <ul class="card__tags">
-              <li>(여기에 추가)</li>
-            </ul>
-            <div class="card__links">
-              <span class="card__link">GitHub ↗</span>
-            </div>
-          </div>
-        </a>
-
-        <a class="card reveal" data-delay="5" data-category="web"
-           href="https://github.com/mck737338"
-           target="_blank" rel="noopener noreferrer">
-          <div class="card__thumb" data-initial="03"></div>
-          <div class="card__body">
-            <h2 class="card__title">프로젝트 제목: (여기에 추가)</h2>
-            <p class="card__desc">설명: (여기에 추가)</p>
-            <ul class="card__tags">
-              <li>(여기에 추가)</li>
-            </ul>
-            <div class="card__links">
-              <span class="card__link">GitHub ↗</span>
-            </div>
-          </div>
-        </a>
-
-        <!-- 4번째 링크 -->
-        <a class="card reveal" data-delay="5" data-category="web"
-           href="https://github.com/mck737338/internetusage_page1"
-           target="_blank" rel="noopener noreferrer">
-          <div class="card__thumb" data-initial="04"></div>
-          <div class="card__body">
-            <h2 class="card__title">인터넷활용 포트폴리오 웹사이트</h2>
-            <p class="card__desc">
-              HTML, CSS, JavaScript로 제작한 포트폴리오 사이트입니다.
-              좌측 고정 탭 네비게이션, 스크롤 페이지 전환, 프로젝트 필터 기능을 구현했습니다.
-            </p>
-            <ul class="card__tags">
-              <li>HTML</li><li>CSS</li><li>JavaScript</li>
-            </ul>
-            <div class="card__links">
-              <span class="card__link">GitHub ↗</span>
-            </div>
-          </div>
-        </a>
-
-        <!-- ===== 11주차 실습 1: D-Day 계산기 ===== -->
-        <a class="card reveal" data-delay="5" data-category="practice web"
+        <!-- ===== 1. 11주차 실습 1: D-Day 계산기 ===== -->
+        <a class="card reveal" data-delay="3" data-category="practice web"
            href="dday.html">
           <div class="card__thumb card__thumb--text" data-initial="D-DAY"></div>
           <div class="card__body">
@@ -155,8 +87,8 @@
           </div>
         </a>
 
-        <!-- ===== 11주차 실습 2: 랜덤 뽑기 ===== -->
-        <a class="card reveal" data-delay="5" data-category="practice web"
+        <!-- ===== 2. 11주차 실습 2: 랜덤 뽑기 ===== -->
+        <a class="card reveal" data-delay="4" data-category="practice web"
            href="random.html">
           <div class="card__thumb card__thumb--text" data-initial="RANDOM"></div>
           <div class="card__body">
@@ -170,6 +102,43 @@
             </ul>
             <div class="card__links">
               <span class="card__link">페이지 바로가기 →</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- ===== 3. Robot Intelligence TurtleBot ===== -->
+        <a class="card reveal" data-delay="5" data-category="robot team"
+           href="https://github.com/mck737338/Robit_intelligence_turtle-bot"
+           target="_blank" rel="noopener noreferrer">
+          <div class="card__thumb" data-initial="01"></div>
+          <div class="card__body">
+            <h2 class="card__title">Robot Intelligence TurtleBot</h2>
+            <p class="card__desc">설명: (여기에 추가)</p>
+            <ul class="card__tags">
+              <li>C++</li><li>Robot</li>
+            </ul>
+            <div class="card__links">
+              <span class="card__link">GitHub ↗</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- ===== 4. 인터넷활용 포트폴리오 웹사이트 ===== -->
+        <a class="card reveal" data-delay="5" data-category="web"
+           href="https://github.com/mck737338/internetusage_page1"
+           target="_blank" rel="noopener noreferrer">
+          <div class="card__thumb" data-initial="02"></div>
+          <div class="card__body">
+            <h2 class="card__title">인터넷활용 포트폴리오 웹사이트</h2>
+            <p class="card__desc">
+              HTML, CSS, JavaScript로 제작한 포트폴리오 사이트입니다.
+              좌측 고정 탭 네비게이션, 스크롤 페이지 전환, 프로젝트 필터 기능을 구현했습니다.
+            </p>
+            <ul class="card__tags">
+              <li>HTML</li><li>CSS</li><li>JavaScript</li>
+            </ul>
+            <div class="card__links">
+              <span class="card__link">GitHub ↗</span>
             </div>
           </div>
         </a>
