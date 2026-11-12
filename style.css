@@ -627,6 +627,46 @@ body::before {
   outline-offset: 3px;
 }
 
+/* 글자가 긴 썸네일(D-DAY, RANDOM 등) */
+.card__thumb--text::after {
+  font-size: 24px;
+  letter-spacing: .12em;
+}
+
+/* ---------- 9-1. 실습 결과 출력 (document.write) ---------- */
+/* dday.html, random.html의 <section class="block js-output"> 안에 출력됩니다 */
+.js-output h1 {
+  font-size: clamp(34px, 6vw, 52px);
+  font-weight: 700;
+  letter-spacing: -.03em;
+  line-height: 1.2;
+  color: var(--accent);
+  margin: 6px 0 4px;
+  word-break: break-all;
+}
+
+.js-output h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-dim);
+  margin-top: 10px;
+}
+
+.js-output hr {
+  height: 1px;
+  border: none;
+  background: var(--line);
+  margin: 22px 0 14px;
+}
+
+.js-output p {
+  font-size: 14px;
+  color: var(--text-dim);
+  word-break: break-all;
+}
+
+.js-output p i { color: var(--text-faint); }
+
 /* ---------- 10. Contact ---------- */
 .contact__list {
   display: flex;

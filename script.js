@@ -15,6 +15,7 @@
 
   /* ---------- 1. 페이지 순서 정의 ---------- */
   // 전환 순서: Home → About → Portfolio → Contact
+  // (dday.html, random.html은 Portfolio에서 들어가는 실습 페이지라 전환 순서에서 제외)
   var PAGES = [
     { file: 'index.html',     label: 'Home' },
     { file: 'about.html',     label: 'About' },
